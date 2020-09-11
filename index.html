@@ -152,6 +152,132 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-快速幂矩阵" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/11/%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9F%A9%E9%98%B5/">快速幂矩阵</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/11/%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9F%A9%E9%98%B5/" class="archive-article-date">
+  	<time datetime="2020-09-11T09:52:56.559Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="快速幂矩阵"><a href="#快速幂矩阵" class="headerlink" title="快速幂矩阵"></a>快速幂矩阵</h1><h2 id="整数快速幂"><a href="#整数快速幂" class="headerlink" title="整数快速幂"></a>整数快速幂</h2><p><img src="file:///C:%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTencent%5CUsers%5C122110187%5CQQ%5CWinTemp%5CRichOle%5C5U6BOZJLRG8VYEXVD4H$S8T.png" alt="img"></p>
+<p>循环算法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">long long normalPower(long long base,long long power)&#123;</span><br><span class="line">    long long result&#x3D;1;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;power;i++)&#123;</span><br><span class="line">        result&#x3D;result*base;</span><br><span class="line">    &#125;</span><br><span class="line">    return result%1000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>缺点：指数爆炸，容易溢出</p>
+<p>取模</p>
+<blockquote>
+<p>(a + b) % p = (a % p + b % p) % p （1）</p>
+<p>(a - b) % p = (a % p - b % p ) % p （2）</p>
+<p>(a * b) % p = (a % p * b % p) % p （3）</p>
+</blockquote>
+<p>其中我们只要关注第“3”条法则即可：(a * b) % p = (a % p * b % p) % p ，我们仔细研究一下这个运算法则，会发现多个因子连续的乘积取模的结果等于每个因子取模后的乘积再取模的结果。也就是说，我们如果要求：</p>
+<p>(a<em>b</em>c)%d=(a%d<em>b%d</em>c%d)%d;</p>
+<p>因此，我们可以借助这个法则，只需要在循环乘积的每一步都提前进行“取模”运算，而不是等到最后直接对结果“取模”，也能达到同样的效果。</p>
+<p>所以，我们的代码可以变成这个样子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">long long normalPower(long long base,long long power)&#123;</span><br><span class="line">    long long result&#x3D;1;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;power;i++)&#123;</span><br><span class="line">        result&#x3D;result*base;</span><br><span class="line">        result&#x3D;result%1000;</span><br><span class="line">    &#125;</span><br><span class="line">    return result%1000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>快速幂：</p>
+<p>快速幂算法能帮我们算出指数非常大的幂，传统的求幂算法之所以时间复杂度非常高（为O(指数n)），就是因为当指数n非常大的时候，需要执行的循环操作次数也非常大。所以我们快速幂算法的核心思想就是每一步都把指数分成两半，而相应的底数做平方运算。这样不仅能把非常大的指数给不断变小，所需要执行的循环次数也变小，而最后表示的结果却一直不会变。让我们先来看一个简单的例子：</p>
+<blockquote>
+<p>3^10=3<em>3</em>3<em>3</em>3<em>3</em>3<em>3</em>3*3</p>
+<p>//尽量想办法把指数变小来，这里的指数为10</p>
+<p>3^10=(3<em>3)</em>(3<em>3)</em>(3<em>3)</em>(3<em>3)</em>(3*3)</p>
+<p>3^10=(3*3)^5</p>
+<p>3^10=9^5</p>
+<p>//此时指数由10缩减一半变成了5，而底数变成了原来的平方，求3^10原本需要执行10次循环操作，求9^5却只需要执行5次循环操作，但是3^10却等于9^5,我们用一次（底数做平方操作）的操作减少了原本一半的循环量，特别是在幂特别大的时候效果非常好，例如2^10000=4^5000,底数只是做了一个小小的平方操作，而指数就从10000变成了5000，减少了5000次的循环操作。</p>
+<p>//现在我们的问题是如何把指数5变成原来的一半，5是一个奇数，5的一半是2.5，但是我们知道，指数不能为小数，因此我们不能这么简单粗暴的直接执行5/2，然而，这里还有另一种方法能表示9^5</p>
+<p>9^5=（9^4）*（9^1）</p>
+<p>//此时我们抽出了一个底数的一次方，这里即为9^1，这个9^1我们先单独移出来,剩下的9^4又能够在执行“缩指数”操作了，把指数缩小一半，底数执行平方操作</p>
+<p>9^5=（81^2）*(9^1)</p>
+<p>//把指数缩小一半，底数执行平方操作</p>
+<p>9^5=（6561^1）*(9^1)</p>
+<p>//此时，我们发现指数又变成了一个奇数1，按照上面对指数为奇数的操作方法，应该抽出了一个底数的一次方，这里即为6561^1，这个6561^1我们先单独移出来，但是此时指数却变成了0，也就意味着我们无法再进行“缩指数”操作了。</p>
+<p>9^5=（6561^0）<em>(9^1)</em>(6561^1)=1<em>(9^1)</em>(6561^1)=(9^1)<em>(6561^1)=9</em>6561=59049</p>
+<p>我们能够发现，最后的结果是9*6561，而9是怎么产生的？是不是当指数为奇数5时，此时底数为9。那6561又是怎么产生的呢？是不是当指数为奇数1时，此时的底数为6561。所以我们能发现一个规律：最后求出的幂结果实际上就是在变化过程中所有当指数为奇数时底数的乘积。</p>
+</blockquote>
+<p>代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">long long fastPower(long long base, long long power) &#123;</span><br><span class="line">    long long result &#x3D; 1;</span><br><span class="line">    while (power &gt; 0) &#123;</span><br><span class="line">        if (power % 2 &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            &#x2F;&#x2F;如果指数为偶数</span><br><span class="line">            power &#x3D; power &#x2F; 2;&#x2F;&#x2F;把指数缩小为一半</span><br><span class="line">            base &#x3D; base * base % 1000;&#x2F;&#x2F;底数变大成原来的平方</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            &#x2F;&#x2F;如果指数为奇数</span><br><span class="line">            power &#x3D; power - 1;&#x2F;&#x2F;把指数减去1，使其变成一个偶数</span><br><span class="line">            result &#x3D; result * base % 1000;&#x2F;&#x2F;此时记得要把指数为奇数时分离出来的底数的一次方收集好</span><br><span class="line">            power &#x3D; power &#x2F; 2;&#x2F;&#x2F;此时指数为偶数，可以继续执行操作</span><br><span class="line">            base &#x3D; base * base % 1000;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">long long fastPower(long long base, long long power) &#123;</span><br><span class="line">    long long result &#x3D; 1;</span><br><span class="line">    while (power &gt; 0) &#123;</span><br><span class="line">        if (power % 2 &#x3D;&#x3D; 1) &#123;</span><br><span class="line">            result &#x3D; result * base % 1000;</span><br><span class="line">        &#125;</span><br><span class="line">        power &#x3D; power &#x2F; 2;</span><br><span class="line">        base &#x3D; (base * base) % 1000;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>按位运算：</p>
+<p>在C语言中，power%2==1可以用更快的“位运算”来代替，例如：power&amp;1。因为如果power为偶数，则其二进制表示的最后一位一定是0；如果power是奇数，则其二进制表示的最后一位一定是1。将他们分别与1的二进制做“与”运算，得到的就是power二进制最后一位的数字了，是0则为偶数，是1则为奇数。例如5是奇数，则5&amp;1=1；而6是偶数，则6&amp;1=0；因此奇偶数的判断就可以用“位运算”来替换了。</p>
+<p>而且，对于power=power/2来说，也可以用更快的“位运算”进行替代，我们只要把power的二进制表示向右移动1位就能变成原来的一半了。</p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">long long fastPower(long long base, long long power) &#123;</span><br><span class="line">    long long result &#x3D; 1;</span><br><span class="line">    while (power &gt; 0) &#123;</span><br><span class="line">        if (power &amp; 1) &#123;&#x2F;&#x2F;此处等价于if(power%2&#x3D;&#x3D;1)</span><br><span class="line">            result &#x3D; result * base % 1000;</span><br><span class="line">        &#125;</span><br><span class="line">        power &gt;&gt;&#x3D; 1;&#x2F;&#x2F;此处等价于power&#x3D;power&#x2F;2</span><br><span class="line">        base &#x3D; (base * base) % 1000;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>矩阵快速幕：</p>
+<p>简单的说矩阵就是二维数组，数存在里面，矩阵乘法的规则:A*B=C![2248975ee1777e0f541a0fe088056520](E:\编程\新建文件夹 (2)\2248975ee1777e0f541a0fe088056520.svg)</p>
+<p>其中c(i)(j)为A的第i行与B的第j列对应乘积的和，即:![3dee7ba9855179c57d3639aff49988dd](E:\编程\新建文件夹 (2)\3dee7ba9855179c57d3639aff49988dd.svg)</p>
+<p>![b92dee3c15549a73a97f7eec26020a56](E:\编程\新建文件夹 (2)\b92dee3c15549a73a97f7eec26020a56.svg)</p>
+<p>![144193a76331fe46b27d9cd48b337f64](E:\编程\新建文件夹 (2)\144193a76331fe46b27d9cd48b337f64.svg)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">struct mat</span><br><span class="line">&#123;</span><br><span class="line">    ll m[maxn][maxn];</span><br><span class="line">&#125;unit;</span><br><span class="line">void init()</span><br><span class="line">&#123;</span><br><span class="line">    for(int i&#x3D;1;i&lt;maxn;i++)</span><br><span class="line">        unit.m[i][i]&#x3D;1;</span><br><span class="line">&#125;</span><br><span class="line">mat matmul(mat a,mat b)</span><br><span class="line">&#123;</span><br><span class="line">    mat ans;</span><br><span class="line">    ll tmp &#x3D;0;</span><br><span class="line">    for(int i&#x3D;1;i&lt;maxn;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j&#x3D;1;j&lt;maxn;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            tmp&#x3D;0;</span><br><span class="line">            for(int k&#x3D;1;k&lt;maxn;k++)</span><br><span class="line">            &#123;</span><br><span class="line">                tmp&#x3D;(tmp+a.m[i][k]*b.m[k][j])%mod;</span><br><span class="line">            &#125;</span><br><span class="line">            ans.m[i][j]&#x3D;tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br><span class="line">mat fastPow(mat a,long ong n)</span><br><span class="line">&#123;</span><br><span class="line">    mat tmp &#x3D; a;</span><br><span class="line">    mat res&#x3D;unit;</span><br><span class="line">    while(n)</span><br><span class="line">    &#123;</span><br><span class="line">        if(n&amp;1)</span><br><span class="line">            res&#x3D;matmul(res,tmp);</span><br><span class="line">        tmp &#x3D; matmul(tmp,tmp);</span><br><span class="line">        n&gt;&gt;&#x3D;1;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>应用：</p>
+<p>主要通过把数放到矩阵的不同位置，然后把普通递推式变成”矩阵的等比数列”，最后快速幂求解递推式:**</p>
+<p><strong>先通过入门的题目来讲应用矩阵快速幂的套路</strong></p>
+<p><strong>矩阵快速幂是用来求解递推式的，所以第一步先要列出递推式:</strong></p>
+<p> <strong>f(n)=f(n-1)+f(n-2)</strong></p>
+<p><strong>第二步是建立矩阵递推式，找到转移矩阵:</strong></p>
+<p><strong><img src="https://img-blog.csdn.net/20160728204308106?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img">,简写成T * A(n-1)=A(n)，T矩阵就是那个2*2的常数矩阵，而<img src="https://img-blog.csdn.net/20160728204540031?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></strong></p>
+<p><strong>这里就是个矩阵乘法等式左边:1*f(n-1)+1*f(n-2)=f(n);1*f(n-1)+0*f(n-2)=f(n-1);</strong></p>
+<p><strong>这里还是说一下构建矩阵递推的大致套路,一般An与A(n-1)都是按照原始递推式来构建的，当然可以先猜一个An,主要是利用矩阵乘法凑出矩阵T,第一行一般就是递推式，后面的行就是不需要的项就让与其的相乘系数为0。矩阵T就叫做转移矩阵(一定要是常数矩阵),它能把A(n-1)转移到A(n);然后这就是个等比数列，直接写出通项:<img src="https://img-blog.csdn.net/20160728205434808?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img">)此处A1叫初始矩阵。所以用一下矩阵快速幂然后乘上初始矩阵就能得到An,这里An就两个元素(两个位置)，根据自己设置的A(n)对应位置就是对应的值，按照上面矩阵快速幂写法，res(1)(1)=f(n)就是我们要求的。</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/11/%E5%BF%AB%E9%80%9F%E5%B9%82%E7%9F%A9%E9%98%B5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-drafr-我的第一篇博文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
