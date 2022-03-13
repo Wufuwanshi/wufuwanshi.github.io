@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>【小迪安全】Day9APP及其它资产 | WuFu&#39;s blog</title>
+  <title>【小迪安全】Day11web漏洞-必懂知识点 | WuFu&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="【小迪安全】Day9APP及其它资产在安全测试中，若 WEB 无法取得进展或无 WEB 的情况下，我们需要 借助 APP 或其他资产在进行信息收集，从而开展后续渗透。 ![img](.&#x2F;【小迪安全】Day9App及其它资产 - 哔哩哔哩_files&#x2F;0af83d9c9289081f17b028dd519a400dffb81ca0.png@798w_639h_progressive.webp) AP">
+  <meta name="description" content="【小迪安全】Day11web漏洞-必懂知识点![img](.&#x2F;【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files&#x2F;7cefc9b9640bcd6d311734b43ee1cb4a25fdd478.png@831w_734h_progressive.webp) CTF**，SRC，红蓝对抗，实战等** #简要说明以上漏洞危害情况  获取网站的数据库的权限（数据），后台账号和密码—">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【小迪安全】Day9APP及其它资产">
-<meta property="og:url" content="http://yoursite.com/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/index.html">
+<meta property="og:title" content="【小迪安全】Day11web漏洞-必懂知识点">
+<meta property="og:url" content="http://yoursite.com/2022/03/04/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day11web%E6%BC%8F%E6%B4%9E-%E5%BF%85%E6%87%82%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
 <meta property="og:site_name" content="WuFu&#39;s blog">
-<meta property="og:description" content="【小迪安全】Day9APP及其它资产在安全测试中，若 WEB 无法取得进展或无 WEB 的情况下，我们需要 借助 APP 或其他资产在进行信息收集，从而开展后续渗透。 ![img](.&#x2F;【小迪安全】Day9App及其它资产 - 哔哩哔哩_files&#x2F;0af83d9c9289081f17b028dd519a400dffb81ca0.png@798w_639h_progressive.webp) AP">
+<meta property="og:description" content="【小迪安全】Day11web漏洞-必懂知识点![img](.&#x2F;【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files&#x2F;7cefc9b9640bcd6d311734b43ee1cb4a25fdd478.png@831w_734h_progressive.webp) CTF**，SRC，红蓝对抗，实战等** #简要说明以上漏洞危害情况  获取网站的数据库的权限（数据），后台账号和密码—">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-19T14:27:47.195Z">
-<meta property="article:modified_time" content="2022-02-19T14:27:47.195Z">
+<meta property="article:published_time" content="2022-03-04T15:04:45.310Z">
+<meta property="article:modified_time" content="2022-03-04T15:04:45.310Z">
 <meta property="article:author" content="WuFu Hunyv">
 <meta name="twitter:card" content="summary">
   
@@ -154,168 +154,172 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-【小迪安全】Day9APP及其它资产" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-【小迪安全】Day11web漏洞-必懂知识点" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      【小迪安全】Day9APP及其它资产
+      【小迪安全】Day11web漏洞-必懂知识点
     </h1>
   
 
         
-        <a href="/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/" class="archive-article-date">
-  	<time datetime="2022-02-19T14:27:47.195Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-19</time>
+        <a href="/2022/03/04/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day11web%E6%BC%8F%E6%B4%9E-%E5%BF%85%E6%87%82%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2022-03-04T15:04:45.310Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="【小迪安全】Day9APP及其它资产"><a href="#【小迪安全】Day9APP及其它资产" class="headerlink" title="【小迪安全】Day9APP及其它资产"></a>【小迪安全】Day9APP及其它资产</h1><p>在安全测试中，若 WEB 无法取得进展或无 WEB 的情况下，我们需要</p>
-<p>借助 APP 或其他资产在进行信息收集，从而开展后续渗透。</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/0af83d9c9289081f17b028dd519a400dffb81ca0.png@798w_639h_progressive.webp)</p>
-<p><strong>APP</strong> <strong>提取一键反编译提取</strong></p>
+        <h1 id="【小迪安全】Day11web漏洞-必懂知识点"><a href="#【小迪安全】Day11web漏洞-必懂知识点" class="headerlink" title="【小迪安全】Day11web漏洞-必懂知识点"></a>【小迪安全】Day11web漏洞-必懂知识点</h1><p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/7cefc9b9640bcd6d311734b43ee1cb4a25fdd478.png@831w_734h_progressive.webp)</p>
+<p><strong>CTF**</strong>，SRC，红蓝对抗，实战等**</p>
+<p>#简要说明以上漏洞危害情况</p>
 <ol>
-<li>漏了个大洞检测APP</li>
+<li><p>获取网站的数据库的权限（数据），后台账号和密码—SQL注入</p>
+</li>
+<li><p>直接获取网站权限—文件上传</p>
+</li>
 </ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/bfcafc69f8faf0a038b364c39dc5bd79fe02541f.png@434w_144h_progressive.webp)</p>
-<ol start="2">
-<li>提取URL</li>
-</ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/76f68f82ba839034de6745078a1f251e56a13ccd.png@596w_378h_progressive.webp)</p>
-<p><strong>APP</strong> <strong>抓数据包进行工具配合—</strong>利用 burp 历史抓更多 URL</p>
-<p>1.监听端口设置</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/c8af9f56a1d4c2441d906eae11f8273fad07cd0a.png@758w_185h_progressive.webp)</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/f8544fd1565c632be95dda083db20aa0197a5145.png@659w_234h_progressive.webp)</p>
-<p>2.获取URL</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/a4e7e55e54d187f5ddaa8babad8aef50e89a970d.png@753w_417h_progressive.webp)</p>
-<p>3.浏览器登录URL</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/33a5dffd8a63d904e679e4d90d277e895e05151b.png@740w_146h_progressive.webp)</p>
-<p>4.发送到scan进行漏洞扫描</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/3526dd7e53aa1f484359a4a86acb860f438ab86a.png@830w_285h_progressive.webp)</p>
-<p><strong>各种第三方应用相关探针技术—45.33.42.112（国外ip）</strong></p>
-<p>1．打开网站—无 WEB 框架下的第三方测试—一片空白</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/7995fe615d24138e76ea36fd911b0f86f9b1ca12.png@830w_284h_progressive.webp)</p>
-<p>2．第三方平台搜索</p>
-<p>#各种端口一顿乱扫-思路</p>
-<p>#各种接口一顿乱扫-思路</p>
-<p>#接口部分一顿测试-思路</p>
+<p>#简要说明以上漏洞等级划分</p>
 <ol>
-<li>nmap扫描</li>
+<li><p>高危：文件上传、SQL注入、代码执行、文件包含、未授权访问</p>
+</li>
+<li><p>中危：逻辑安全、目录遍历</p>
+</li>
+<li><p>低危：信息泄露—源码、部分账号密码</p>
+</li>
 </ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/35fad1fe3bea428078b82f18f4265a4b4644813d.png@831w_669h_progressive.webp)</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/2bee9ac20fb0b51705f313d8e18fbb555c63f7b7.png@831w_516h_progressive.webp)</p>
+<p>#简要说明以上漏洞重点内容</p>
+<ol>
+<li><p>CTF：SQL注入、<strong>反序列化</strong>、代码执行</p>
+</li>
+<li><p>SRC：以上都有，逻辑安全—0元购买</p>
+</li>
+<li><p>红蓝对抗：高危漏洞—权限</p>
+</li>
+</ol>
+<p>#简要说明以上漏洞形势问题</p>
+<ol>
+<li>SQL注入网上没有：信息收集少；知识点不够；网站上确实没有此漏洞</li>
+</ol>
+<p><strong>案例演示：</strong></p>
+<ol>
+<li>靶场搭建—<a href="https://github.com/zhuifengshaonianhanlu/pikachu" target="_blank" rel="noopener">https://github.com/zhuifengshaonianhanlu/pikachu</a></li>
+</ol>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/f2cdf0c7cf7ce563767a44b7c8ba3615941db02b.png@831w_209h_progressive.webp)</p>
+<p>#修改数据库密码—初始化</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/39e5df2d4e5784e4313f69b517e06d42e6800238.png@699w_216h_progressive.webp)</p>
 <ol start="2">
-<li>shodan.io扫描</li>
+<li>SQL 注入漏洞-数据库操作危害</li>
 </ol>
-<p>#获取域名和端口信息</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/3b87ca780dbb71b93b609611c1341365df2f0157.png@831w_261h_progressive.webp)</p>
+<p>#通过用户id查询用户名和邮件</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/f2b0f44cd37467fa67ff6179fd4048bf2ff13a0d.png@452w_146h_progressive.webp)</p>
+<p>#通过form表单以post提交数据</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/479baa778d6e78cb5f819d1713695e9ce56ccec5.png@597w_206h_progressive.webp)</p>
+<p>#查看数据库—进门pikachu数据库</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/ed6464b1dc7aea87356d10f2355c931a46972618.png@429w_254h_progressive.webp)</p>
+<p>#查询用户表和会员表</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/6067cfb0d5a8a3b38efe21308a7047519ddeef68.png@824w_260h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/8ce526ca4bfde84ee6f6e885863dbaf8a7d2747b.png@831w_405h_progressive.webp)</p>
+<p>#查看源码—-并且显示数据库的查询语句</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/8f8ab236ec15163ee4e599fdfc282a9063e88a7a.png@831w_455h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/bd29deed03aeff7d1e40feb2f9e6cc75830441e9.png@596w_177h_progressive.webp)</p>
+<p>#将语句放在数据库里执行</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/56ece02428c1fb4609358ef1b737dd6c1af2e5ac.png@702w_209h_progressive.webp)</p>
+<p>#联合查询数据库id=1的用户名和密码</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/2ce7a87742451b82db38905600a2db9aeb978929.png@831w_207h_progressive.webp)</p>
+<p>#抓包分析—-对应的SQL语句</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/076520e3292908140dbc4087bcb68c6273294d81.png@801w_338h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/e5bf1d0d2379642a2b5ca32a1e1d8d0e8fe0335e.png@606w_224h_progressive.webp)</p>
+<p>#修改id=1=1 union select username,password from users,数据库操作语句随之更改</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/3fb1ce8b5a02794fc7e4d4f2b8914af0f017dbe0.png@785w_80h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/240a61e49c2a486b213bfa7600b817b87e120366.png@831w_87h_progressive.webp)</p>
 <ol start="3">
-<li>ZoomEye扫描</li>
+<li>目录遍历漏洞-源码结构泄漏危害—不能读取文件的路径</li>
 </ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/b81921dbcfd2c45e97026b13ca975cf291940e7f.png@831w_194h_progressive.webp)</p>
-<p>#点击返回内容特殊的端口</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/ec9e9a00f243faa4174c36181acfcce3b9f4dcf8.png@830w_177h_progressive.webp)</p>
-<p>#通过源码查看特殊关键字</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/a6842cd57703148679851946274eabdc44ee9a7c.png@831w_102h_progressive.webp)</p>
-<p>#搜索关键字—ROMpage查看是否有漏洞</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/d757756b77d972ed3b3331f3705575a4d92adf2a.png@830w_263h_progressive.webp)</p>
-<p>#查找的关键—数据包有回复内容，不是fileerror或者notfound</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/5c146fed33605050a5861a2688993f61df324525.png@830w_261h_progressive.webp)</p>
+<p>#文件目录一级和二级</p>
+<p>192.168.102.128:8888/vul/dir/dir_list.php?title=<strong>jarheads.php</strong></p>
+<p>192.168.102.128:8888/vul/dir/dir_list.php?title=<strong>truman.php</strong></p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/0774da9ded8b54293bfd01990eef0aa137073825.png@822w_165h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/4799efd74bcd8dd2c828c838cbc2c04763b4a12f.png@765w_209h_progressive.webp)</p>
+<p><strong>#</strong>/vul/dir/dir_list文件路径；dir_list.php文件名；title=truman.php文件参数</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/629a92046786853b8eb65c3f97b9381ffa8de8bd.png@831w_93h_progressive.webp)</p>
+<p>#通过title参数链接到soup路径下文件</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/7ee0b9d50bcd10339ea3774fabf788cd470fa779.png@617w_144h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/ded1f96ed2942ab1e0b0ca7c46cdc7ba37f2bb99.png@831w_120h_progressive.webp)</p>
+<p>#在soup路径下创建文件，修改浏览器文件路径访问</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/8e2dc9d5f46a75575416ce23120997b9f4fb5774.png@831w_137h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/5c22165776417052804b15f995c117bd8e465c26.png@791w_170h_progressive.webp)</p>
+<p>#假如在www目录下存在一个文件9.PHP，修改网站路径访问— 192.168.102.128:8888/vul/dir/dir_list.php?title=../../../../9.php</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/31c82d3719b3273406b0931619c3872db77a3ef7.png@831w_177h_progressive.webp)</p>
+<p>#同理，获取网站的config.inc.php文件，获取账号密码—查看页面源代码发现没有成功</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/22817e7e9381c84425cdf8e5752366e2bbfc757f.png@831w_101h_progressive.webp)</p>
+<p>#查看dir_list.php文件，只对文件进行包含（打包），没有进行读取</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/7bbe01f2139334628e4cd6dcfb10189fe62d3bda.png@831w_186h_progressive.webp)</p>
+<p>#修改代码为读取文件并且显示</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/32bb6d38b483538cba56d8927e802c7316d3e8d8.png@831w_294h_progressive.webp)</p>
+<p>#查看源代码</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/03c59a6c44daeb638731893ebc231d028e77fc67.png@831w_209h_progressive.webp)</p>
+<p>#文件路径的获取1—-扫描工具（铸剑）获取</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/42ffc4484366a1f359e2f6cfda3f1c275e6c7506.png@831w_188h_progressive.webp)</p>
+<p>#文件路径的获取2—-首页的源代码获取</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/9cdfdf3034dc62cd19330f6e75d6745257c08abe.png@831w_201h_progressive.webp)</p>
 <ol start="4">
-<li>Fofa.so扫描</li>
+<li>PHP文件夹遍历—不能读取文件内容</li>
 </ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/9c85b1b933741e4a796cca618ea14d3d0aa04080.png@831w_267h_progressive.webp)</p>
-<p>​       5.第三方扫描ip总结：  扫描的ip具有多个端口，查看网站的返回，一般来说有content，HTML，link，href等等，并且没有eror，notfound等等。</p>
-<p><strong>各种服务接口信息相关探针技术</strong></p>
-<ol>
-<li>群友 WEB 授权测试下的服务测试—<a href="http://www.caredaily.com" target="_blank" rel="noopener">www.caredaily.com</a></li>
-</ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/84e4fd7bb7abcf9b8ef2a5146dcd2ad8c56135c2.png@831w_186h_progressive.webp)</p>
-<ol start="2">
-<li><p>Web漏洞评估—-网站功能较少，存在漏洞的可能性比较低</p>
-</li>
-<li><p>对网站进行扫描—发现8个子域名</p>
-</li>
-</ol>
-<p>pos.api.caredaily.com；wsl.caredaily.com；mo.caredaily.com</p>
-<p>m.caredaily.com；<a href="http://www.caredaily.com；" target="_blank" rel="noopener">www.caredaily.com；</a></p>
-<ol start="4">
-<li>查看www主网站的端口</li>
-</ol>
-<p>#8000端口—SSH-2.0-OpenSSH_7.6p1</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/20561202ffdee69adf55f304fb2ead2ddea10bfb.png@831w_189h_progressive.webp)</p>
-<p>#查找漏洞</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/9e59203f5e2c3945f741868c615f28b7692057f1.png@831w_255h_progressive.webp)</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/facd9082bf67f292d5fb0368ef147774ebef5729.png@831w_93h_progressive.webp)</p>
-<p>#27017端口—mongodb： Version”: “4.0.12”—数据库爆破</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/664b79c45dd8a02b1eb0a8f0dd3993fc2e07a09a.png@830w_138h_progressive.webp)</p>
-<p>#查看是否有数据库漏洞</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/15d96f69afa1dc9cd118f5abfe51d2392a182715.png@831w_200h_progressive.webp)</p>
-<p>#21端口—ftp文件传输协议</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/d56edad3d2a13e56c89b5b81dae1aa2fa00fda18.png@830w_120h_progressive.webp)</p>
-<p>#尝试ftp连接—可能存在ftp漏洞</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/e9728d06108c2bee97913703dece07748f63702b.png@693w_50h_progressive.webp)</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/c4bc1d611d6295f32468697245680c5c13c7b468.png@831w_279h_progressive.webp)</p>
-<p>#nmap扫描—看看第三方没有扫描没有扫到的端口</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/f547cfb6b352513d1989b0191d621a9c48f1c6b0.png@831w_258h_progressive.webp)</p>
-<p>#82端口</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/a3925764e9d457ef827d91d47053c2d9f034aa9c.png@743w_209h_progressive.webp)</p>
+<p>#在源代码路径创建遍历文件夹的PHP文件</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/1f47f1a71b7f070000a6df310bcdf15210319675.png@831w_314h_progressive.webp)</p>
+<p>#浏览器访问</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/9064c0b96e989bd126b0c668abe7144ee0570224.png@831w_338h_progressive.webp)</p>
+<p>#源码内容获取危害—有一些网站会存在别人留下的目录文件遍历的漏洞，只要找到这些文件并且下载，就知道网站源码的目录结构。当然，需要一些手法配合，才能发挥真正的作用。</p>
 <ol start="5">
-<li>信息总结—caredaily.com</li>
+<li>文件上传漏洞-WEB 权限丢失危害</li>
 </ol>
-<p>Ip：121.40.216.101</p>
-<p>OpenSSH</p>
-<p>Mongodb</p>
-<p>​    子域名：mo.caredaily.com/</p>
+<p>#打开目的网站</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/895134d137468c0361ce7b3b950e503b076bb78d.png@639w_180h_progressive.webp)</p>
+<p>#上传PHP文件—上传失败，只能是图片格式</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/333049ebc2aa6cc4ea55b8d15ba3c7a087a2b809.png@485w_120h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/fcf16487c80018b396a2fd3c4097a89823730f81.png@491w_129h_progressive.webp)</p>
+<p>#将文件改为JPG格式上传—上传成功</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/2eb7d71bdc29e8b766cb09637bd3870465cb2d88.png@426w_146h_progressive.webp)</p>
+<p>#通过路径提示访问文件的地址—访问失败</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/406483943123c2f5be3962d39e6cb56b3db1bc90.png@831w_101h_progressive.webp)</p>
+<p>#抓包修改，将ipg的数据包x.jpg改为x.php格式，发送</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/7b0dca3f1c6cbb86c99eb3fe23abe8e03b10c693.png@831w_260h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/bc6f4bc4685ad744fd4a1e8ac58be8af3fd4d19d.png@504w_161h_progressive.webp)</p>
+<p>#再次访问图片的地址—执行PHP脚本—-也可以用菜刀连接</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/fc1db886f6ec16dfa5dcf72b98463f83f7edbd73.png@831w_312h_progressive.webp)</p>
 <ol start="6">
-<li>搜索引擎搜索子域名—百度和谷歌搜索</li>
+<li>文件下载漏洞-补充演示拓展演示</li>
 </ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/b1d842a5867ab5b81bf5a1462c6ce6bbc82b6bc1.png@621w_114h_progressive.webp)</p>
-<p>#查看子域名—经销商的登录</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/81205e6a1151b4b223f7a9873c63d4f487604787.png@831w_168h_progressive.webp)</p>
-<p>#查看ip地址</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/1e2d6ce64f8ff17f6a5daf749b131ff9e92748eb.png@719w_57h_progressive.webp)</p>
-<p>#第三方与nmap查询ip—120.26.52.87</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/8cbf5d007ac7c31bc9f11b096a4c6b186ab433f2.png@831w_170h_progressive.webp)</p>
-<p>#端口尝试—80端口，</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/6e2cb432729c2e9690b0d6c6fc516370f17810fb.png@830w_189h_progressive.webp)</p>
-<ol start="7">
-<li>子域名查询与爆破</li>
-</ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/1176381db07b1dea032d8077ec928bc7b6649c15.png@831w_201h_progressive.webp)</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/56ecd7d42711844fff2727be38f42614da570a3d.png@752w_90h_progressive.webp)</p>
-<ol start="8">
-<li>旁注查询</li>
-</ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/384f64914128107257c99b65c43e5bee7c5dda61.png@830w_207h_progressive.webp)</p>
-<ol start="9">
-<li>备案信息—查看网站还备案了那些域名— <a href="http://www.hkaspire.net查询ip；www.hkaspire.cn查询ip" target="_blank" rel="noopener">www.hkaspire.net查询ip；www.hkaspire.cn查询ip</a></li>
-</ol>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/400a108ab3989744a74a2cef5c0eecb2c45f716b.png@830w_254h_progressive.webp)</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/efe7c06e3b95064c6eaf1bb2b8c344e3ff798f1a.png@773w_89h_progressive.webp)</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/0aff497dac5e98c5350e904b82f9ce82b9f849d7.png@785w_87h_progressive.webp)</p>
-<p>#第三方搜索—OpenSSH漏洞</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/cfe75737a4ab0265dc4fc595c6bc23d65ed5e1f2.png@702w_113h_progressive.webp)</p>
-<p>10.网站接口查询—在主站的页脚点击防伪查询</p>
-<p>11.网站浏览备案域名</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/6b3cb9851f52d1fd08a6a2d3eeffe62bf4b7cd0f.png@830w_195h_progressive.webp)</p>
-<p>#获取PHP探针信息</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/93c2432fe12afa41bb7808dc4d116b23463b87c5.png@831w_192h_progressive.webp)</p>
-<p>12.百度/谷歌搜索官网名称—查询子域名（域名相似网站）</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/58c7430c198db9698a2c191e2b84de026078ee0f.png@831w_174h_progressive.webp)</p>
-<p>#查看文件路径— caredaily.xyz/robots.txt</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/bbe002a85129f0ee2fce403906e3282d83f13d17.png@797w_159h_progressive.webp)</p>
-<p>#同理，官网的/robots.txt路径—这里没有</p>
-<p>#根据文件目录查询—youdiancms可能存在漏洞</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/fdac385d7bcaf9744af9d076e1eb0cd675b2aa15.png@831w_206h_progressive.webp)</p>
-<p>#搜索漏洞</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/40eac4e94b9a48e4de7434e15b92e95e08b21a38.png@831w_284h_progressive.webp)</p>
-<p>13.搜索引擎关键字查询—查询子域名</p>
-<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/73c0dd867d363ef60ecc99893ecd726b3c32675c.png@831w_201h_progressive.webp)</p>
+<p>#靶场网站</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/148debba50ed25e0b488bfbb3ebf750e3af3517a.png@831w_417h_progressive.webp)</p>
+<p>#下载图片—分析下载地址：参数前的文件路径都一致</p>
+<p><a href="http://192.168.102.128:8888/vul/unsafedownload/execdownload.php?filename=kb.png" target="_blank" rel="noopener">http://192.168.102.128:8888/vul/unsafedownload/execdownload.php?filename=kb.png</a></p>
+<p><a href="http://192.168.102.128:8888/vul/unsafedownload/execdownload.php?filename=ai.png" target="_blank" rel="noopener">http://192.168.102.128:8888/vul/unsafedownload/execdownload.php?filename=ai.png</a></p>
+<p>#查看虚拟机的文件路径—图片在download文件夹中</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/9d64f7b0b6b7cd0f83c247e46708babf18d83a0f.png@780w_195h_progressive.webp)</p>
+<p>#通过改变浏览器路径来下载之前的dir.php文件—<a href="http://192.168.102.128:8888/vul/unsafedownload/execdownload.php?filename=..\..\..\dir.php" target="_blank" rel="noopener">http://192.168.102.128:8888/vul/unsafedownload/execdownload.php?filename=..\..\..\dir.php</a></p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/19003d167a8fcbee2bf58059196a68a5cbe013d2.png@831w_248h_progressive.webp)</p>
+<p>#同理，下载数据库配置文件</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/d05e52a047ed19b09b45d470bed7a236999fbf3f.png@831w_197h_progressive.webp)</p>
+<p>#真实的文件下载漏洞—<a href="http://down.znds.com/" target="_blank" rel="noopener">http://down.znds.com/</a></p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/ebaa88ef202f556debbed75887d8f85ece4064a0.png@831w_158h_progressive.webp)</p>
+<p>#下载文件，查看下载路径</p>
+<p>文件下载地址：</p>
+<p>183.240.64.227/app.znds.com/down/20210903/dbkgyy_1.7.2_dangbei.apk</p>
+<p>网页下载地址：</p>
+<p><a href="http://down.znds.com/getdownurl/?s=L2Rvd24vMjAyMTA5MDMvZGJrZ3l5XzEuNy4yX2RhbmdiZWkuYXBr" target="_blank" rel="noopener">http://down.znds.com/getdownurl/?s=L2Rvd24vMjAyMTA5MDMvZGJrZ3l5XzEuNy4yX2RhbmdiZWkuYXBr</a></p>
+<p>#解密信息—下载地址：</p>
+<p>down.znds.com/getdownurl/?s=/down/20210903/dbkgyy_1.7.2_dangbei.apk</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/c45e7683981e2173542eeed50b3189b05567d38d.png@831w_206h_progressive.webp)</p>
+<p>#如果要下载如s=index.php,先进行URL加密,再在浏览器访问—emmmm出错了</p>
+<p>   URL链接：down.znds.com/getdownurl/?s= ......\index.php</p>
+<p>URL加密：down.znds.com/getdownurl/?s=Li5cLi5cLi5caW5kZXgucGhw</p>
+<p>![img](./【小迪安全】Day11web漏洞-必懂知识点 - 哔哩哔哩_files/7cb8f51548899759af856e7380b552b3469065c9.png@831w_180h_progressive.webp)</p>
 
       
 
@@ -395,7 +399,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2022/03/04/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day11web%E6%BC%8F%E6%B4%9E-%E5%BF%85%E6%87%82%E7%9F%A5%E8%AF%86%E7%82%B9/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -409,18 +413,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/03/04/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day11web%E6%BC%8F%E6%B4%9E-%E5%BF%85%E6%87%82%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/03/13/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E2%80%94%E2%80%94%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E5%8F%8AWAF/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          【小迪安全】Day11web漏洞-必懂知识点
+          信息收集——站点搭建及WAF
         
       </div>
     </a>
   
   
-    <a href="/2021/11/30/HA/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HA</div>
+    <a href="/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【小迪安全】Day9APP及其它资产</div>
       <i class="icon-circle-right"></i>
     </a>
   
