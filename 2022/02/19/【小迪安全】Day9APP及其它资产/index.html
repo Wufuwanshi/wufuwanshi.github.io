@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>HA | WuFu&#39;s blog</title>
+  <title>【小迪安全】Day9APP及其它资产 | WuFu&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用以上网络架构，使用 docker 搭建各个应用服务器，实现高可用与负载均衡，并使用 Zabbix 进行监控和管理 配置主机名12hostnamectl set-hostname xxx&#x2F;bin&#x2F;bash  配置网卡1234567vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33BOOTPROT">
+  <meta name="description" content="【小迪安全】Day9APP及其它资产在安全测试中，若 WEB 无法取得进展或无 WEB 的情况下，我们需要 借助 APP 或其他资产在进行信息收集，从而开展后续渗透。 ![img](.&#x2F;【小迪安全】Day9App及其它资产 - 哔哩哔哩_files&#x2F;0af83d9c9289081f17b028dd519a400dffb81ca0.png@798w_639h_progressive.webp) AP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HA">
-<meta property="og:url" content="http://yoursite.com/2021/11/30/HA/index.html">
+<meta property="og:title" content="【小迪安全】Day9APP及其它资产">
+<meta property="og:url" content="http://yoursite.com/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/index.html">
 <meta property="og:site_name" content="WuFu&#39;s blog">
-<meta property="og:description" content="使用以上网络架构，使用 docker 搭建各个应用服务器，实现高可用与负载均衡，并使用 Zabbix 进行监控和管理 配置主机名12hostnamectl set-hostname xxx&#x2F;bin&#x2F;bash  配置网卡1234567vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33BOOTPROT">
+<meta property="og:description" content="【小迪安全】Day9APP及其它资产在安全测试中，若 WEB 无法取得进展或无 WEB 的情况下，我们需要 借助 APP 或其他资产在进行信息收集，从而开展后续渗透。 ![img](.&#x2F;【小迪安全】Day9App及其它资产 - 哔哩哔哩_files&#x2F;0af83d9c9289081f17b028dd519a400dffb81ca0.png@798w_639h_progressive.webp) AP">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-30T02:52:38.102Z">
-<meta property="article:modified_time" content="2021-11-30T03:11:15.126Z">
+<meta property="article:published_time" content="2022-02-19T14:27:47.195Z">
+<meta property="article:modified_time" content="2022-02-19T14:27:47.195Z">
 <meta property="article:author" content="WuFu Hunyv">
 <meta name="twitter:card" content="summary">
   
@@ -154,103 +154,168 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HA" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-【小迪安全】Day9APP及其它资产" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HA
+      【小迪安全】Day9APP及其它资产
     </h1>
   
 
         
-        <a href="/2021/11/30/HA/" class="archive-article-date">
-  	<time datetime="2021-11-30T02:52:38.102Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-30</time>
+        <a href="/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/" class="archive-article-date">
+  	<time datetime="2022-02-19T14:27:47.195Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用以上网络架构，使用 docker 搭建各个应用服务器，实现高可用与负载均衡，并使用 Zabbix 进行监控和管理</p>
-<h2 id="配置主机名"><a href="#配置主机名" class="headerlink" title="配置主机名"></a><strong>配置主机名</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname xxx</span><br><span class="line">&#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置网卡"><a href="#配置网卡" class="headerlink" title="配置网卡"></a><strong>配置网卡</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33</span><br><span class="line"></span><br><span class="line">BOOTPROTO&#x3D;static</span><br><span class="line">ONBOOT&#x3D;yes</span><br><span class="line">IPADDR&#x3D;192.168.xxx.xxx</span><br><span class="line">NETMASK&#x3D;255.255.255.0</span><br><span class="line">GATEWAY&#x3D;192.168.xxx.2</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置nginx1和APP1、APP2实现一般轮询负载均衡"><a href="#配置nginx1和APP1、APP2实现一般轮询负载均衡" class="headerlink" title="配置nginx1和APP1、APP2实现一般轮询负载均衡"></a><strong>配置nginx1和APP1、APP2实现一般轮询负载均衡</strong></h2><p>在 APP1 和 APP2 中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf</span><br><span class="line">DocumentRoot &quot;&#x2F;var&#x2F;www&quot;</span><br><span class="line"></span><br><span class="line">echo xxx@APPx &gt; &#x2F;var&#x2F;www&#x2F;index.php</span><br><span class="line">systemctl start httpd</span><br></pre></td></tr></table></figure>
-
-<p>在 nginx1 中，编辑 /etc/nginx/nginx.conf 文件，重新启动 nginx 服务，配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf </span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">   listen 80;</span><br><span class="line">   server_name  www.test.com;</span><br><span class="line">   location &#x2F; &#123;</span><br><span class="line">     proxy_pass http:&#x2F;&#x2F;APP;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#配置负载均衡服务器组</span><br><span class="line">upstream APP &#123;</span><br><span class="line">   server 172.19.131.111;</span><br><span class="line">   server 172.19.131.112;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置nginx1和nginx2上的keepalived，实现高可用"><a href="#配置nginx1和nginx2上的keepalived，实现高可用" class="headerlink" title="配置nginx1和nginx2上的keepalived，实现高可用"></a><strong>配置nginx1和nginx2上的keepalived，实现高可用</strong></h2><p>在 nginx1 编辑 /etc/keepalived/keepalived.conf，启动 keepalived服务，配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;keepalived&#x2F;keepalived.conf</span><br><span class="line"></span><br><span class="line">router id nginx1</span><br><span class="line">#vrrp_strict</span><br><span class="line">vrrp+instance VI_1 &#123;</span><br><span class="line">    state MASTER</span><br><span class="line">    virtual_router_id 51</span><br><span class="line">    priority 100</span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        172.19.131.10</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">删除此后所有内容</span><br><span class="line"></span><br><span class="line">systemctl start keepalived</span><br></pre></td></tr></table></figure>
-
-<p>在 nginx2 编辑 /etc/keepalived/keepalived.conf，启动 keepalived服务，配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;keepalived&#x2F;keepalived.conf</span><br><span class="line"></span><br><span class="line">router id nginx2</span><br><span class="line">#vrrp_strict</span><br><span class="line">vrrp+instance VI_1 &#123;</span><br><span class="line">    state BACKUP</span><br><span class="line">    virtual_router_id 51</span><br><span class="line">    priority 90</span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        172.19.131.10</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">删除此后所有内容</span><br><span class="line"></span><br><span class="line">systemctl start keepalived</span><br></pre></td></tr></table></figure>
-
-<p>网卡命令：ifconfig eth0 down/up</p>
-<h2 id="配置mysql-master、mysql-slave实现mysql主从复制"><a href="#配置mysql-master、mysql-slave实现mysql主从复制" class="headerlink" title="配置mysql-master、mysql-slave实现mysql主从复制"></a><strong>配置mysql-master、mysql-slave实现mysql主从复制</strong></h2><p>在 mysql-master 容器创建“姓名简拼”数据库和 users 数据表，表结构如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"></span><br><span class="line">mysql&gt; create database 姓名简拼;</span><br><span class="line">mysql&gt; create table users(id char(16) not null,username char(20) not null,primary key(id));</span><br><span class="line">mysql&gt; insert into users(id,username) values(&#39;学号&#39;,&#39;姓名全拼&#39;);</span><br></pre></td></tr></table></figure>
-
-<p>在 mysql-master 编辑 /etc/my.cnf.d/mysql-server.cnf 配置 server-id 启用 binlog 日志</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vi &#x2F;etc&#x2F;my.cnf.d&#x2F;mysql-server.cnf</span><br><span class="line"></span><br><span class="line">server-id &#x3D; 1</span><br><span class="line">log-bin &#x3D; mysql-bin</span><br><span class="line">innodb-file-per-table &#x3D;ON</span><br><span class="line">skip_name_resolve&#x3D;ON</span><br><span class="line">binlog-do-db &#x3D; dxm</span><br><span class="line"></span><br><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
-
-<p>在 mysql-master 建立复制账号 copy 并授予“姓名简拼”数据库所有表的所有权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"></span><br><span class="line">mysql&gt; CREATE USER &quot;copy&quot;@&quot;%&quot; IDENTIFIED BY &quot;123456&quot;;</span><br><span class="line">mysql&gt; grant replication slave on *.*  to copy@&#39;%&#39;;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
-
-<p>在 mysql-slave 容器编辑 /etc/my.cnf.d/mysql-server.cnf 配置 server-id 启用 binlog 日志</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vi &#x2F;etc&#x2F;my.cnf.d&#x2F;mysql-server.cnf</span><br><span class="line"></span><br><span class="line">server-id &#x3D; 2</span><br><span class="line">innodb_file_per_table&#x3D;ON</span><br><span class="line">skip_name_resolve&#x3D;ON</span><br><span class="line">relay-log&#x3D;relay-log1</span><br><span class="line">relay-log-index&#x3D;relay-log.index</span><br><span class="line">binlog-do-db &#x3D; dxm</span><br></pre></td></tr></table></figure>
-
-<p>在 mysql-slave 删除 /var/lib/mysql/auto.cnf，并重启mysql，查看 server-id</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm -rf &#x2F;var&#x2F;lib&#x2F;mysql&#x2F;auto.cnf</span><br><span class="line">systemctl restart mysqld</span><br><span class="line">mysql -u root -p</span><br><span class="line">mysql&gt; show variables like &#39;server_id&#39;;</span><br></pre></td></tr></table></figure>
-
-<p>在 mysql-master 备份“姓名简拼”数据库拷贝到 mysql-slave 并恢复</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">在 mysql-master 中</span><br><span class="line">cd ~</span><br><span class="line">mysqldump –u root –p dxm &gt; xxx.sql      &#x2F;&#x2F;这条要手输</span><br><span class="line"></span><br><span class="line">在 mysql-slave 中</span><br><span class="line">passwd</span><br><span class="line"></span><br><span class="line">在 mysql-master 中</span><br><span class="line">scp xxx.sql root@172.19.131.202:&#x2F;root</span><br><span class="line"></span><br><span class="line">在 mysql-slave 中</span><br><span class="line">mysql -u root -p</span><br><span class="line">create database 姓名简拼;</span><br><span class="line"></span><br><span class="line">cd ~</span><br><span class="line">mysql –u root –p dxm &lt; xxx.sql        &#x2F;&#x2F;这条要手输</span><br></pre></td></tr></table></figure>
-
-<p>在mysql-slave配置复制参数启动复制</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">在 Master 中：</span><br><span class="line">mysql -u root -p</span><br><span class="line">mysql&gt; show master status;</span><br><span class="line"></span><br><span class="line">在 Slave 中</span><br><span class="line">mysql -u root -p</span><br><span class="line">mysql&gt; change master to master_host&#x3D;&#39;172.19.131.201&#39;, master_user&#x3D;&#39;copy&#39;, master_password&#x3D;&#39;123456&#39;, master_log_file&#x3D;&#39;mysql-bin.000001&#39;, master_log_pos&#x3D;123, master_connect_retry&#x3D;30;</span><br><span class="line">注意更改相关参数与 Master 中的参数相同</span><br><span class="line">mysql&gt; start slave;</span><br></pre></td></tr></table></figure>
-
-<p>在 Slave 中查看复制状态：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">show slave status \G;</span><br><span class="line">检查 Slave_IO_Running 和 Slave_SQL_Running 为 Yes</span><br></pre></td></tr></table></figure>
-
-<p>在 Master 中插入数据，在 Slave 中查看：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在 Master 中</span><br><span class="line">use 姓名全拼;</span><br><span class="line">insert into users values(&quot;123&quot;,&quot;copy&quot;);</span><br><span class="line"></span><br><span class="line">在 Slave 中</span><br><span class="line">use 姓名全拼;</span><br><span class="line">select * from users;</span><br></pre></td></tr></table></figure>
-
-<h2 id="在-zabbix-centos7-9-虚拟机监控-docker-centos7-9"><a href="#在-zabbix-centos7-9-虚拟机监控-docker-centos7-9" class="headerlink" title="在 zabbix@centos7.9 虚拟机监控 docker@centos7.9"></a><strong>在 <a href="mailto:zabbix@centos7.9">zabbix@centos7.9</a> 虚拟机监控 <a href="mailto:docker@centos7.9">docker@centos7.9</a></strong></h2><p>在 <a href="mailto:zabbix@centos7.9">zabbix@centos7.9</a> 虚拟机查看安装的 zabbix 软件包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep zabbix</span><br></pre></td></tr></table></figure>
-
-<p>创建初始数据库并授权，导入初始架构和数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">mysql&gt; create database zabbix character set utf8 collate utf8_bin;</span><br><span class="line">mysql&gt; create user zabbix@localhost identified by &#39;password&#39;;</span><br><span class="line">mysql&gt; grant all privileges on zabbix.* to zabbix@localhost;</span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line"></span><br><span class="line">gzip -d &#x2F;usr&#x2F;share&#x2F;doc&#x2F;zabbix-server-mysql-5.0.12&#x2F;create.sql.gz</span><br><span class="line">vim &#x2F;usr&#x2F;share&#x2F;doc&#x2F;zabbix-server-mysql-5.0.12&#x2F;create.sql</span><br><span class="line">修改第 348 行数字为 255</span><br><span class="line">mysql -u zabbix  -p zabbix &lt; &#x2F;usr&#x2F;share&#x2F;doc&#x2F;zabbix-server-mysql-5.0.12&#x2F;create.sql</span><br><span class="line">密码：password</span><br></pre></td></tr></table></figure>
-
-<p>编辑 /etc/zabbix/zabbix_server.conf 为 Zabbix server 配置数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;zabbix&#x2F;zabbix_server.conf </span><br><span class="line">第 124 行取消注释密码为 password</span><br></pre></td></tr></table></figure>
-
-<p>编辑 /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf 为 Zabbix 前端配置PHP</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim  &#x2F;etc&#x2F;opt&#x2F;rh&#x2F;rh-php72&#x2F;php-fpm.d&#x2F;zabbix.conf</span><br><span class="line">第 24 行改为：Asia&#x2F;Shanghai</span><br></pre></td></tr></table></figure>
-
-<p>启动 Zabbix server 和 agent 进程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm</span><br></pre></td></tr></table></figure>
-
-<p>在主机使用浏览器连接到zabbix前端，根据提示完成安装</p>
-<p>在主机web界面登录zabbix，用户名密码为Admin:zabbix</p>
-<p>在docker@centos7.9启用zabbix agent和net-snmp服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;zabbix&#x2F;zabbix_agentd.conf</span><br><span class="line">Server&#x3D;192.168.111.254</span><br><span class="line"></span><br><span class="line">systemctl start zabbix-agent snmpd</span><br><span class="line"></span><br><span class="line">长时间没有连接成功尝试：</span><br><span class="line">setenforce 0</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl start zabbix-agent snmpd</span><br><span class="line">vim &#x2F;etc&#x2F;zabbix&#x2F;zabbix_agentd.conf</span><br><span class="line">ServerActive&#x3D;192.168.111.254</span><br></pre></td></tr></table></figure>
-
-<p>AB 压力测试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在 docker 机中</span><br><span class="line">systemctl start httpd</span><br><span class="line">ab -c 100 -n 10000000 http:&#x2F;&#x2F;192.168.145.131&#x2F;index.html</span><br></pre></td></tr></table></figure>
-
-<p>zabbix 监控模板如下设置：</p>
-<p>配置——主机——配置好的主机名——模板——选择</p>
-<p>——Template/Operating System——Template OS Linux by Zabbix agent</p>
-<p>然后配置网络流量监控：</p>
-<p>配置——主机——配置好的主机名——监控项——创建监控项——名称随意键值为 net.if.total[ens33,bytes] 单位为 bps</p>
-<p>——其余设置不变，点击更新</p>
-<p>配置——主机——配置好的主机名——图形——创建图形——名称随意，添加监控项为刚添加的监控项——添加</p>
-<p>如上设置即可</p>
-<p>在监控中点击上方还剩5分钟会更容易看到效果</p>
+        <h1 id="【小迪安全】Day9APP及其它资产"><a href="#【小迪安全】Day9APP及其它资产" class="headerlink" title="【小迪安全】Day9APP及其它资产"></a>【小迪安全】Day9APP及其它资产</h1><p>在安全测试中，若 WEB 无法取得进展或无 WEB 的情况下，我们需要</p>
+<p>借助 APP 或其他资产在进行信息收集，从而开展后续渗透。</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/0af83d9c9289081f17b028dd519a400dffb81ca0.png@798w_639h_progressive.webp)</p>
+<p><strong>APP</strong> <strong>提取一键反编译提取</strong></p>
+<ol>
+<li>漏了个大洞检测APP</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/bfcafc69f8faf0a038b364c39dc5bd79fe02541f.png@434w_144h_progressive.webp)</p>
+<ol start="2">
+<li>提取URL</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/76f68f82ba839034de6745078a1f251e56a13ccd.png@596w_378h_progressive.webp)</p>
+<p><strong>APP</strong> <strong>抓数据包进行工具配合—</strong>利用 burp 历史抓更多 URL</p>
+<p>1.监听端口设置</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/c8af9f56a1d4c2441d906eae11f8273fad07cd0a.png@758w_185h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/f8544fd1565c632be95dda083db20aa0197a5145.png@659w_234h_progressive.webp)</p>
+<p>2.获取URL</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/a4e7e55e54d187f5ddaa8babad8aef50e89a970d.png@753w_417h_progressive.webp)</p>
+<p>3.浏览器登录URL</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/33a5dffd8a63d904e679e4d90d277e895e05151b.png@740w_146h_progressive.webp)</p>
+<p>4.发送到scan进行漏洞扫描</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/3526dd7e53aa1f484359a4a86acb860f438ab86a.png@830w_285h_progressive.webp)</p>
+<p><strong>各种第三方应用相关探针技术—45.33.42.112（国外ip）</strong></p>
+<p>1．打开网站—无 WEB 框架下的第三方测试—一片空白</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/7995fe615d24138e76ea36fd911b0f86f9b1ca12.png@830w_284h_progressive.webp)</p>
+<p>2．第三方平台搜索</p>
+<p>#各种端口一顿乱扫-思路</p>
+<p>#各种接口一顿乱扫-思路</p>
+<p>#接口部分一顿测试-思路</p>
+<ol>
+<li>nmap扫描</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/35fad1fe3bea428078b82f18f4265a4b4644813d.png@831w_669h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/2bee9ac20fb0b51705f313d8e18fbb555c63f7b7.png@831w_516h_progressive.webp)</p>
+<ol start="2">
+<li>shodan.io扫描</li>
+</ol>
+<p>#获取域名和端口信息</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/3b87ca780dbb71b93b609611c1341365df2f0157.png@831w_261h_progressive.webp)</p>
+<ol start="3">
+<li>ZoomEye扫描</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/b81921dbcfd2c45e97026b13ca975cf291940e7f.png@831w_194h_progressive.webp)</p>
+<p>#点击返回内容特殊的端口</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/ec9e9a00f243faa4174c36181acfcce3b9f4dcf8.png@830w_177h_progressive.webp)</p>
+<p>#通过源码查看特殊关键字</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/a6842cd57703148679851946274eabdc44ee9a7c.png@831w_102h_progressive.webp)</p>
+<p>#搜索关键字—ROMpage查看是否有漏洞</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/d757756b77d972ed3b3331f3705575a4d92adf2a.png@830w_263h_progressive.webp)</p>
+<p>#查找的关键—数据包有回复内容，不是fileerror或者notfound</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/5c146fed33605050a5861a2688993f61df324525.png@830w_261h_progressive.webp)</p>
+<ol start="4">
+<li>Fofa.so扫描</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/9c85b1b933741e4a796cca618ea14d3d0aa04080.png@831w_267h_progressive.webp)</p>
+<p>​       5.第三方扫描ip总结：  扫描的ip具有多个端口，查看网站的返回，一般来说有content，HTML，link，href等等，并且没有eror，notfound等等。</p>
+<p><strong>各种服务接口信息相关探针技术</strong></p>
+<ol>
+<li>群友 WEB 授权测试下的服务测试—<a href="http://www.caredaily.com" target="_blank" rel="noopener">www.caredaily.com</a></li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/84e4fd7bb7abcf9b8ef2a5146dcd2ad8c56135c2.png@831w_186h_progressive.webp)</p>
+<ol start="2">
+<li><p>Web漏洞评估—-网站功能较少，存在漏洞的可能性比较低</p>
+</li>
+<li><p>对网站进行扫描—发现8个子域名</p>
+</li>
+</ol>
+<p>pos.api.caredaily.com；wsl.caredaily.com；mo.caredaily.com</p>
+<p>m.caredaily.com；<a href="http://www.caredaily.com；" target="_blank" rel="noopener">www.caredaily.com；</a></p>
+<ol start="4">
+<li>查看www主网站的端口</li>
+</ol>
+<p>#8000端口—SSH-2.0-OpenSSH_7.6p1</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/20561202ffdee69adf55f304fb2ead2ddea10bfb.png@831w_189h_progressive.webp)</p>
+<p>#查找漏洞</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/9e59203f5e2c3945f741868c615f28b7692057f1.png@831w_255h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/facd9082bf67f292d5fb0368ef147774ebef5729.png@831w_93h_progressive.webp)</p>
+<p>#27017端口—mongodb： Version”: “4.0.12”—数据库爆破</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/664b79c45dd8a02b1eb0a8f0dd3993fc2e07a09a.png@830w_138h_progressive.webp)</p>
+<p>#查看是否有数据库漏洞</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/15d96f69afa1dc9cd118f5abfe51d2392a182715.png@831w_200h_progressive.webp)</p>
+<p>#21端口—ftp文件传输协议</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/d56edad3d2a13e56c89b5b81dae1aa2fa00fda18.png@830w_120h_progressive.webp)</p>
+<p>#尝试ftp连接—可能存在ftp漏洞</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/e9728d06108c2bee97913703dece07748f63702b.png@693w_50h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/c4bc1d611d6295f32468697245680c5c13c7b468.png@831w_279h_progressive.webp)</p>
+<p>#nmap扫描—看看第三方没有扫描没有扫到的端口</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/f547cfb6b352513d1989b0191d621a9c48f1c6b0.png@831w_258h_progressive.webp)</p>
+<p>#82端口</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/a3925764e9d457ef827d91d47053c2d9f034aa9c.png@743w_209h_progressive.webp)</p>
+<ol start="5">
+<li>信息总结—caredaily.com</li>
+</ol>
+<p>Ip：121.40.216.101</p>
+<p>OpenSSH</p>
+<p>Mongodb</p>
+<p>​    子域名：mo.caredaily.com/</p>
+<ol start="6">
+<li>搜索引擎搜索子域名—百度和谷歌搜索</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/b1d842a5867ab5b81bf5a1462c6ce6bbc82b6bc1.png@621w_114h_progressive.webp)</p>
+<p>#查看子域名—经销商的登录</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/81205e6a1151b4b223f7a9873c63d4f487604787.png@831w_168h_progressive.webp)</p>
+<p>#查看ip地址</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/1e2d6ce64f8ff17f6a5daf749b131ff9e92748eb.png@719w_57h_progressive.webp)</p>
+<p>#第三方与nmap查询ip—120.26.52.87</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/8cbf5d007ac7c31bc9f11b096a4c6b186ab433f2.png@831w_170h_progressive.webp)</p>
+<p>#端口尝试—80端口，</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/6e2cb432729c2e9690b0d6c6fc516370f17810fb.png@830w_189h_progressive.webp)</p>
+<ol start="7">
+<li>子域名查询与爆破</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/1176381db07b1dea032d8077ec928bc7b6649c15.png@831w_201h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/56ecd7d42711844fff2727be38f42614da570a3d.png@752w_90h_progressive.webp)</p>
+<ol start="8">
+<li>旁注查询</li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/384f64914128107257c99b65c43e5bee7c5dda61.png@830w_207h_progressive.webp)</p>
+<ol start="9">
+<li>备案信息—查看网站还备案了那些域名— <a href="http://www.hkaspire.net查询ip；www.hkaspire.cn查询ip" target="_blank" rel="noopener">www.hkaspire.net查询ip；www.hkaspire.cn查询ip</a></li>
+</ol>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/400a108ab3989744a74a2cef5c0eecb2c45f716b.png@830w_254h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/efe7c06e3b95064c6eaf1bb2b8c344e3ff798f1a.png@773w_89h_progressive.webp)</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/0aff497dac5e98c5350e904b82f9ce82b9f849d7.png@785w_87h_progressive.webp)</p>
+<p>#第三方搜索—OpenSSH漏洞</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/cfe75737a4ab0265dc4fc595c6bc23d65ed5e1f2.png@702w_113h_progressive.webp)</p>
+<p>10.网站接口查询—在主站的页脚点击防伪查询</p>
+<p>11.网站浏览备案域名</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/6b3cb9851f52d1fd08a6a2d3eeffe62bf4b7cd0f.png@830w_195h_progressive.webp)</p>
+<p>#获取PHP探针信息</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/93c2432fe12afa41bb7808dc4d116b23463b87c5.png@831w_192h_progressive.webp)</p>
+<p>12.百度/谷歌搜索官网名称—查询子域名（域名相似网站）</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/58c7430c198db9698a2c191e2b84de026078ee0f.png@831w_174h_progressive.webp)</p>
+<p>#查看文件路径— caredaily.xyz/robots.txt</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/bbe002a85129f0ee2fce403906e3282d83f13d17.png@797w_159h_progressive.webp)</p>
+<p>#同理，官网的/robots.txt路径—这里没有</p>
+<p>#根据文件目录查询—youdiancms可能存在漏洞</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/fdac385d7bcaf9744af9d076e1eb0cd675b2aa15.png@831w_206h_progressive.webp)</p>
+<p>#搜索漏洞</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/40eac4e94b9a48e4de7434e15b92e95e08b21a38.png@831w_284h_progressive.webp)</p>
+<p>13.搜索引擎关键字查询—查询子域名</p>
+<p>![img](./【小迪安全】Day9App及其它资产 - 哔哩哔哩_files/73c0dd867d363ef60ecc99893ecd726b3c32675c.png@831w_201h_progressive.webp)</p>
 
       
 
@@ -330,7 +395,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/11/30/HA/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +409,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/02/19/%E3%80%90%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E3%80%91Day9APP%E5%8F%8A%E5%85%B6%E5%AE%83%E8%B5%84%E4%BA%A7/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          【小迪安全】Day9APP及其它资产
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/11/16/XXE/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">XXE</div>
+    <a href="/2021/11/30/HA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HA</div>
       <i class="icon-circle-right"></i>
     </a>
   
